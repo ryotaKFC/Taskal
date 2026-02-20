@@ -19,6 +19,9 @@
 - **外部API**: Google Calendar API
 - **リンタ、フォーマッタ**: Biome
 
+また、アーキテクチャにはFSDを採用する
+ただしprocesses層は使わなくてよさそうなのでいらない
+UIは基本的にshadcnを使う
 
 ## 3. 機能要件
 
@@ -84,6 +87,4 @@ Supabase (PostgreSQL) を使用して以下のデータを管理する。
 | `guest_contact_id` | UUID (FK) | 紐づくゲスト連絡先のID |
 
 ## 5. 今後の検討事項・特記事項
-
-- **Google OAuthのスコープ**: Googleカレンダーへ予定を追加するため、ログイン時に `https://www.googleapis.com/auth/calendar.events` のスコープ要求が必要。
-- **一般公開時の対応**: 一般ユーザー向けにリリースする際は、Google Cloud ConsoleにてOAuth同意画面の検証プロセス（カレンダー権限の審査）を通過させる必要がある。
+- supabase authのGoogle OAuthにGoogle Calendar APIも持たせてるので、もしかしたらそこからいい感じにAPI叩けるかも？
