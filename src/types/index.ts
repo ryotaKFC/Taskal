@@ -1,2 +1,2 @@
-export type { Database, TaskStatus, TaskPriority } from "./database.types";
-export type { Task, GuestContact, TaskGuest } from "./models";
+export type { Database, TaskPriority, TaskStatus } from "./database.types";
+export type { GuestContact, Task, TaskGuest } from "./models";
