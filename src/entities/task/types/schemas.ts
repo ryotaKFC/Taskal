@@ -1,4 +1,4 @@
-import * as v from "valibot";
+import { v } from "@/shared/lib/valibot";
 
 export const TaskStatusSchema = v.picklist(["todo", "in_progress", "done"]);
 export type TaskStatus = v.InferOutput<typeof TaskStatusSchema>;

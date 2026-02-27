@@ -1,4 +1,4 @@
-import * as v from "valibot";
+import { v } from "@/shared/lib/valibot";
 
 export const GuestContactSchema = v.pipe(
 	v.object({
